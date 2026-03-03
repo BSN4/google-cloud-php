@@ -62,6 +62,16 @@ class CommitRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.spanner.v1.MultiplexedSessionPrecommitToken precommit_token = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     protected $precommit_token = null;
+    /**
+     * Optional. Makes the Spanner requests location-aware if present.
+     * It gives the server hints that can be used to route the request
+     * to an appropriate server, potentially significantly decreasing latency and
+     * improving throughput. To achieve improved performance, most fields must be
+     * filled in with accurate values.
+     *
+     * Generated from protobuf field <code>.google.spanner.v1.RoutingHint routing_hint = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    protected $routing_hint = null;
     protected $transaction;
 
     /**
@@ -153,6 +163,12 @@ class CommitRequest extends \Google\Protobuf\Internal\Message
      *           session, then you must include the precommit token with the highest
      *           sequence number received in this transaction attempt. Failing to do so
      *           results in a `FailedPrecondition` error.
+     *     @type \Google\Cloud\Spanner\V1\RoutingHint $routing_hint
+     *           Optional. Makes the Spanner requests location-aware if present.
+     *           It gives the server hints that can be used to route the request
+     *           to an appropriate server, potentially significantly decreasing latency and
+     *           improving throughput. To achieve improved performance, most fields must be
+     *           filled in with accurate values.
      * }
      */
     public function __construct($data = NULL) {
@@ -442,6 +458,50 @@ class CommitRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Cloud\Spanner\V1\MultiplexedSessionPrecommitToken::class);
         $this->precommit_token = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional. Makes the Spanner requests location-aware if present.
+     * It gives the server hints that can be used to route the request
+     * to an appropriate server, potentially significantly decreasing latency and
+     * improving throughput. To achieve improved performance, most fields must be
+     * filled in with accurate values.
+     *
+     * Generated from protobuf field <code>.google.spanner.v1.RoutingHint routing_hint = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return \Google\Cloud\Spanner\V1\RoutingHint|null
+     */
+    public function getRoutingHint()
+    {
+        return $this->routing_hint;
+    }
+
+    public function hasRoutingHint()
+    {
+        return isset($this->routing_hint);
+    }
+
+    public function clearRoutingHint()
+    {
+        unset($this->routing_hint);
+    }
+
+    /**
+     * Optional. Makes the Spanner requests location-aware if present.
+     * It gives the server hints that can be used to route the request
+     * to an appropriate server, potentially significantly decreasing latency and
+     * improving throughput. To achieve improved performance, most fields must be
+     * filled in with accurate values.
+     *
+     * Generated from protobuf field <code>.google.spanner.v1.RoutingHint routing_hint = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param \Google\Cloud\Spanner\V1\RoutingHint $var
+     * @return $this
+     */
+    public function setRoutingHint($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Cloud\Spanner\V1\RoutingHint::class);
+        $this->routing_hint = $var;
 
         return $this;
     }

@@ -141,7 +141,7 @@ class ReadRequest extends \Google\Protobuf\Internal\Message
      */
     protected $lock_hint = 0;
     /**
-     * Optional. If present, it makes the Spanner requests location-aware.
+     * Optional. Makes the Spanner requests location-aware if present.
      * It gives the server hints that can be used to route the request
      * to an appropriate server, potentially significantly decreasing latency and
      * improving throughput. To achieve improved performance, most fields must be
@@ -226,7 +226,7 @@ class ReadRequest extends \Google\Protobuf\Internal\Message
      *           Optional. Lock Hint for the request, it can only be used with read-write
      *           transactions.
      *     @type \Google\Cloud\Spanner\V1\RoutingHint $routing_hint
-     *           Optional. If present, it makes the Spanner requests location-aware.
+     *           Optional. Makes the Spanner requests location-aware if present.
      *           It gives the server hints that can be used to route the request
      *           to an appropriate server, potentially significantly decreasing latency and
      *           improving throughput. To achieve improved performance, most fields must be
@@ -723,7 +723,7 @@ class ReadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. If present, it makes the Spanner requests location-aware.
+     * Optional. Makes the Spanner requests location-aware if present.
      * It gives the server hints that can be used to route the request
      * to an appropriate server, potentially significantly decreasing latency and
      * improving throughput. To achieve improved performance, most fields must be
@@ -748,7 +748,7 @@ class ReadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. If present, it makes the Spanner requests location-aware.
+     * Optional. Makes the Spanner requests location-aware if present.
      * It gives the server hints that can be used to route the request
      * to an appropriate server, potentially significantly decreasing latency and
      * improving throughput. To achieve improved performance, most fields must be
